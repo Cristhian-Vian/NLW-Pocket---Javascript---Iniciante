@@ -83,15 +83,16 @@ Apresentar os dados
 
 # Estrutura de repetição
 
-- [] while
+- [x] while
 
 # Condicionais
 
-- [] switch
+- [x] switch
 - [] if/else
 
 ## Módulos em Node.js:
 
+- NPM (Node package manager): Gerenciador de pacotes do Node.js para importação de módulos
 - [] Importação de módulos (require, CommonJS)
 - [] Biblioteca 'inquirer' para criar prompts interativos
 - [] FS (file system)
