@@ -92,9 +92,10 @@ Apresentar os dados
 
 ## Módulos em Node.js:
 
-- NPM (Node package manager): Gerenciador de pacotes do Node.js para importação de módulos
-- [] Importação de módulos (require, CommonJS)
-- [] Biblioteca 'inquirer' para criar prompts interativos
+- [x] Importação de módulos (require, CommonJS)
+    - NPM (Node package manager): Gerenciador de pacotes do Node.js para importação de módulos
+- [x] Biblioteca 'inquirer' para criar prompts interativos
+    - Comando para instalação: $ npm install inquierer
 - [] FS (file system)
 
 ## JSON
@@ -105,4 +106,18 @@ Apresentar os dados
 
 ## Programação assíncrona e Promises:
 
-- [] Uso de funções assíncronas (async/await)
+- [x] Uso de funções assíncronas (async/await)
+- O assincronismo permite que o programa continue fazendo outras tarefas enquanto espera por uma operação demorada, como fazer uma requisição a uma API ou ler um arquivo.
+- Promises: São objetos que representam o eventual resultado (ou falha) de uma operação assíncrona. É como uma promessa de que algo será feito no futuro.
+    - Uma Promise pode estar em três estados: pendente, resolvida ou rejeitada.
+    - Quando uma operação assíncrona é iniciada, uma Promise é criada.
+    - Quando a operação termina, a Promise é resolvida com um valor (se tudo ocorreu bem) ou rejeitada com um erro.
+    - Você pode usar os métodos .then() e .catch() para lidar com os resultados da Promise.
+
+- Async/Await: São sintaxes mais recentes que tornam o trabalho com Promises mais fácil e intuitivo.
+    - async: Declara uma função como assíncrona. Dentro dessa função, você pode usar a palavra-chave await.
+    - await: Pausa a execução da função até que a Promise seja resolvida, e então retorna o valor resolvido.
+
+## Arquivo .gitignore
+
+- O arquivo .gitignore tem a função de ignorar o controle de versionamento nos arquivos que são passados como parametro
