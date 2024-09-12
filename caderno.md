@@ -46,6 +46,7 @@ Apresentar os dados
 - [x] Operadores de atribuição de valor: =
 - [x] Operador de contatenação: +
 - [x] Operadores de comparação: == != <= >= < >
+    - != ("diferente de")
 - [x] Spread operator: ...
     - Spread é uma ferramenta que permite "espalhar" os elementos de um iterável (como arrays ou objetos) em outros contextos
 
