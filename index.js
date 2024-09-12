@@ -50,10 +50,10 @@ const cadastrarMeta = async () => {
 // Função para listar as metas
 const listarMetas = async () => {
     // Função para verificar se não há metas
-    if (listarMetas.length == 0) {
-        mensagem = "Não existem metas!"
-        return
-    }
+    // if (listarMetas.length == 0) {
+    //     mensagem = "Não existem metas!"
+    //     return
+    // }
 
     const respostas = await checkbox({
         message: "Use as Setas para mudar de meta, o Espaço para marcar ou desmarcar e o Enter para finalizar essa etapa.",
@@ -86,10 +86,10 @@ const listarMetas = async () => {
 // Função para exibir as metas realizadas
 const metasRealizadas = async () => {
     // Função para verificar se não há metas
-    if (listarMetas.length == 0) {
-        mensagem = "Não existem metas!"
-        return
-    }
+    // if (listarMetas.length == 0) {
+    //     mensagem = "Não existem metas!"
+    //     return
+    // }
 
     const realizadas = metas.filter((meta) => {
         return meta.checked
@@ -109,10 +109,10 @@ const metasRealizadas = async () => {
 // Função para exibir as metas em aberto
 const metasAbertas = async () => {
     // Função para verificar se não há metas
-    if (listarMetas.length == 0) {
-        mensagem = "Não existem metas!"
-        return
-    }
+    // if (listarMetas.length == 0) {
+    //     mensagem = "Não existem metas!"
+    //     return
+    // }
 
     const abertas = metas.filter((meta) => {
         return !meta.checked // Outra opção de escrita: return meta.checked != true
@@ -132,10 +132,10 @@ const metasAbertas = async () => {
 // Função para deletar metas
 const deletarMetas = async () => {
     // Função para verificar se não há metas
-    if (listarMetas.length == 0) {
-        mensagem = "Não existem metas!"
-        return
-    }
+    // if (listarMetas.length == 0) {
+    //     mensagem = "Não existem metas!"
+    //     return
+    // }
 
     // Percore o array de metas e retorna todas as metas com o valor de checked False (desmarcadas)
     const metasDesmarcadas = metas.map((meta) => {
