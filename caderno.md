@@ -46,7 +46,8 @@ Apresentar os dados
 - [x] Operadores de atribuição de valor: =
 - [x] Operador de contatenação: +
 - [x] Operadores de comparação: == != <= >= < >
-- [] Spread operator: ...
+- [x] Spread operator: ...
+    - Spread é uma ferramenta que permite "espalhar" os elementos de um iterável (como arrays ou objetos) em outros contextos
 
 ## Estruturas de dados:
 
@@ -55,7 +56,8 @@ Apresentar os dados
 - [x] Uma lista que contém qualquer tipo de dado
     - arrays são declaros com colchetes "[]"
     - Exemplo: $ let listaDeNomes = ["Cristhian", "Leticia"]
-- [x] Métodos de array: push, [find, forEach, filter, map] : HOF (Higher Order Functions)
+- [] Métodos de array: push, [find, forEach, filter, map] : HOF (Higher Order Functions)
+    - forEach: para cada
 
 ### Objetos:
 - Objetos são declarados com chaves "{}"
@@ -96,6 +98,9 @@ Apresentar os dados
     - NPM (Node package manager): Gerenciador de pacotes do Node.js para importação de módulos
 - [x] Biblioteca 'inquirer' para criar prompts interativos
     - Comando para instalação: $ npm install inquierer
+    - select: um elemento HTML que cria uma lista suspensa de opções 
+    - input: um elemento HTML que pode criar diversos tipos de campos de entrada, utilizado para coletar dados do usuário
+    - checkbox: um tipo específico de input que permite ao usuário selecionar uma ou mais opções de uma lista
 - [] FS (file system)
 
 ## JSON
