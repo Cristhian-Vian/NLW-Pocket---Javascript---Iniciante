@@ -14,6 +14,7 @@ Como um lego, você irá utilizar peças para criar algoritmos, ou seja, para re
 - [x] Operadores (atribuição, concatenação, matemáticos, lógicos )
 - [x] Tipos de dados (string, number, boolean)
 - [x] Estrutura de dados (functions, object, array)
+    - Paradigma do JavaScript: todos os dados são interpretados como objetos!
 - [x] Controle de fluxo (if/else)
 - [x] Estrutura de repetição (for, while, switch)
 

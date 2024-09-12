@@ -1,6 +1,8 @@
 // Importação do módulo require
 const { select, input, checkbox } = require('@inquirer/prompts')
 
+// Variaveis de controle
+let mensagem = "Bem vindo ao app de Metas!";
 let meta = {
     value: 'Tomar 3 litros de água por dia',
     checked: false
@@ -12,7 +14,7 @@ const cadastrarMeta = async () => {
     const meta = await input({ message: "Digite a meta:"})
     
     if (meta.length == 0) {
-        console.log("A meta não pode ser vazia.")
+        mensagem = "A meta não pode ser vazia."
         return // Retorna para o while do menu, encerrando a função cadastrarMeta
         //return cadastrarMeta() // Retorna para a função cadastrarMeta até o usuario digitar algo
     }
@@ -20,6 +22,8 @@ const cadastrarMeta = async () => {
     metas.push(
         {value: meta, checked: false}
     )
+
+    mensagem = "Meta cadastrada com sucesso!"
 }
 
 // Função para listar as metas
@@ -36,7 +40,7 @@ const listarMetas = async () => {
     })
 
     if (respostas.length == 0) {
-        console.log("Nenhuma meta selecionada!")
+        mensagem = "Nenhuma meta selecionada!"
         return
     }
 
@@ -49,7 +53,7 @@ const listarMetas = async () => {
         meta.checked = true
     })
 
-    console.log("Meta(s) marcada(s) como concluída(s)")
+    mensagem = "Meta(s) marcada(s) como concluída(s)"
 }
 
 // Função para exibir as metas realizadas
@@ -59,7 +63,7 @@ const metasRealizadas = async () => {
     })
 
     if (realizadas.length == 0) {
-        console.log("Não existem metas realizadas! ☹️")
+        mensagem = "Não existem metas realizadas! ☹️"
         return
     }
 
@@ -76,7 +80,7 @@ const metasAbertas = async () => {
     })
 
     if (abertas.length == 0) {
-        console.log("Não existem metas abertas! 🙂")
+        mensagem = "Não existem metas abertas! 🙂"
         return
     }
 
@@ -105,7 +109,7 @@ const deletarMetas = async () => {
 
     // Verifica se a lista de itens para deletar esta vazia
     if (itensParaDeletar.length == 0) {
-        console.log("Nenhum item para deletar!")
+        mensagem = "Nenhum item para deletar!"
         return
     }
 
@@ -117,12 +121,24 @@ const deletarMetas = async () => {
         })
     })
     
-    console.log("Meta(s) deletada(s) com sucesso!")
+    mensagem = "Meta(s) deletada(s) com sucesso!"
 }
 
-// Função para iniciar a aplicação
+// Função para o sistema de mensagens do app (limpar o console e exibir mensagens)
+const mostrarMensagem = () => {
+    console.clear(); // Limpa as informações do terminal
+
+    if (mensagem != "") {
+        console.log(mensagem) // Exibe a mensagem no terminal
+        console.log("") // Exibe uma linha vazia no terminal para efeito de espaçamento
+        mensagem = "" // Torna a variavel mensagem vazia
+    }
+}
+
+// Função principal para iniciar a aplicação
 const start = async () => {    
     while (true) {
+        mostrarMensagem(); // Executa a função de mensagens a cada iteração do console
 
         const opcao = await select ({
             message: "Menu >",
@@ -157,7 +173,6 @@ const start = async () => {
         switch(opcao) {
             case "cadastrar":
                 await cadastrarMeta()
-                console.log(metas)
                 break
             case "listar":
                 await listarMetas()
@@ -178,5 +193,5 @@ const start = async () => {
     }
 };
 
-// Executa a função start e inicia o programa
+// Executa a função start e inicia o programa no terminal
 start();
