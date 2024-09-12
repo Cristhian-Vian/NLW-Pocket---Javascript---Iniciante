@@ -29,15 +29,15 @@ const listarMetas = async () => {
         instructions: false // para desabilitar as instruções default do console em inglês
     })
 
-    if (respostas.length == 0) {
-        console.log("Nenhuma meta selecionada!")
-        return
-    }
-
     // Função para alterar o valor de checked para False nas metas não marcadas como concluidas
     metas.forEach((m) => {
         m.checked = false
     })
+
+    if (respostas.length == 0) {
+        console.log("Nenhuma meta selecionada!")
+        return
+    }
 
     // Função para alterar o valor de checked para True nas metas que foram marcadas como concluidas
     respostas.forEach((resposta) => {
