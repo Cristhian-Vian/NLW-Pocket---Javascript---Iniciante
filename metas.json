@@ -14,5 +14,9 @@
   {
     "value": "Meditar por 5 minutos",
     "checked": false
+  },
+  {
+    "value": "Beber agua",
+    "checked": false
   }
 ]
