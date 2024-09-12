@@ -1,3 +1,4 @@
+// Importação do módulo require
 const { select, input, checkbox } = require('@inquirer/prompts')
 
 let meta = {
@@ -85,6 +86,40 @@ const metasAbertas = async () => {
     })
 }
 
+// Função para deletar metas
+const deletarMetas = async () => {
+    // Percore o array de metas e retorna todas as metas com o valor de checked False (desmarcadas)
+    const metasDesmarcadas = metas.map((meta) => {
+        return {
+            value: meta.value, // Mantem o valor original da propriedade value
+            checked: false // Altera o valor da meta para False
+        }
+    })
+
+    // Lista as metas para serem deletadas no formato de checkbox
+    const itensParaDeletar = await checkbox({
+        message: "Selecione um item para deletar",
+        choices: [...metasDesmarcadas],
+        instructions: false
+    })
+
+    // Verifica se a lista de itens para deletar esta vazia
+    if (itensParaDeletar.length == 0) {
+        console.log("Nenhum item para deletar!")
+        return
+    }
+
+    // Percorre o array <itensParaDeletar> e substitui os itens de forma agressiva
+    // Se o item estiver marcado no checkbox do console, ele não entra no novo array <metas>
+    itensParaDeletar.forEach((item) => {
+        metas = metas.filter((meta) => {
+            return meta.value != item
+        })
+    })
+    
+    console.log("Meta(s) deletada(s) com sucesso!")
+}
+
 // Função para iniciar a aplicação
 const start = async () => {    
     while (true) {
@@ -109,6 +144,10 @@ const start = async () => {
                     value: "abertas"
                 },
                 {
+                    name: "Deletar metas",
+                    value: "deletar"
+                },
+                {
                     name: "Sair",
                     value: "sair"
                 }
@@ -128,6 +167,9 @@ const start = async () => {
                 break
             case "abertas":
                 await metasAbertas()
+                break
+            case "deletar":
+                await deletarMetas()
                 break
             case "sair":
                 console.log("Até a próxima!")

@@ -58,7 +58,9 @@ Apresentar os dados
     - arrays são declaros com colchetes "[]"
     - Exemplo: $ let listaDeNomes = ["Cristhian", "Leticia"]
 - [x] Métodos de array: push, [find, forEach, filter, map] : HOF (Higher Order Functions)
+    - Toda HOF precisa de uma função para ser executada
     - forEach: "para cada"
+    - map: modifica o array original
 
 ### Objetos:
 - Objetos são declarados com chaves "{}"
