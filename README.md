@@ -2,11 +2,11 @@
 
 ## Descrição
 
-O aplicativo de controle de metas é um software de linha de comando desenvolvido em Node.js que utiliza o módulo Inquirer.js para criar uma interface interativa com o usuário. Ele permite aos usuários:
+O aplicativo de controle de metas é um software de linha de comando desenvolvido em Node.js que utiliza o módulo Inquirer.js para criar uma interface interativa com o usuário.
 
 ![Aplicação rodando no terminal:](assets/app.png)
 
-### Ele permite aos usuários:
+Ele permite aos usuários:
 
 * **Cadastrar novas metas:** Adicionar metas a serem alcançadas.
 * **Listar metas:** Visualizar todas as metas cadastradas.
