@@ -20,9 +20,9 @@ Como um lego, você irá utilizar peças para criar algoritmos, ou seja, para re
 
 # Fases da resolução de um problema
 
-Coletar os dados
+Coletar os dados (leitura)
 Processar os dados (manipular, alterar ...)
-Apresentar os dados
+Apresentar os dados (escrita)
 
 ## Escopo e variáveis:
 
@@ -105,16 +105,27 @@ Apresentar os dados
     - select: um elemento HTML que cria uma lista suspensa de opções 
     - input: um elemento HTML que pode criar diversos tipos de campos de entrada, utilizado para coletar dados do usuário
     - checkbox: um tipo específico de input que permite ao usuário selecionar uma ou mais opções de uma lista
-- [] FS (file system)
+- [x] FS (file system): módulo nativo do node.js
 
 ## JSON
 
-- [] Javascript Object Notation (.json)
-- [] JSON.parse(): transforma de JSON para JS
-- [] JSON.stringify(): transforma de JS para JSON
+- [x] Javascript Object Notation (.json)
+    - É um formato padrão leve utilizado para representar dados estruturados de forma textual e versátil para trabalhar com dados estruturados
+    - É baseado na sintaxe dos objetos em JavaScript, porém é independente de qualquer linguagem de programação
+    - Cada elemento de um objeto JSON é composto por pares chave-valor
+        - Exemplo: ${
+                   $    "chave": "Valor"
+                   $    "nome": "Cristhian",
+                   $    "idade": 26
+                   $}
+        - A chave é sempre uma string, e o valor pode ser string, number, boolean, null, object ou array
+- [x] JSON.parse(): transforma de JSON para JS
+- [x] JSON.stringify(): transforma de JS para JSON
 
 ## Programação assíncrona e Promises:
 
+- Funções síncronas: bloqueiam a execução do código até que a operação termine
+- Funções assíncronas: permitem que o código continue sendo executado enquanto a operação é realizada em segundo plano
 - [x] Uso de funções assíncronas (async/await)
 - O assincronismo permite que o programa continue fazendo outras tarefas enquanto espera por uma operação demorada, como fazer uma requisição a uma API ou ler um arquivo.
 - Promises: São objetos que representam o eventual resultado (ou falha) de uma operação assíncrona. É como uma promessa de que algo será feito no futuro.

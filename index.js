@@ -1,15 +1,36 @@
-// Importação do módulo require
+// Importação do módulo inquirer
 const { select, input, checkbox } = require('@inquirer/prompts')
+// Importação do módulo fs
+const fs = require("fs").promises
 
-// Variaveis de controle
+// Variavel de controle das mensagens
 let mensagem = "Bem vindo ao app de Metas!";
-let meta = {
-    value: 'Tomar 3 litros de água por dia',
-    checked: false
+
+// Variavel de controle que armazena as metas
+let metas
+
+// Função para ler e carregar as metas do arquivo <metas.json>
+const carregarMetas = async () => {
+    // Tenta ler os dados do arquivo <metas.json> e armazena na variavel <metas>
+    try {
+        const dados = await fs.readFile("metas.json", "utf-8") // Faz a leitura dos dados no arquivo <metas.json>
+        metas = JSON.parse(dados) // Transforma os dados de JSON para JS
+    }
+    // Se a leitura der errado, retorna um array vazio na variavel <metas>
+    catch (erro) {
+        metas = [] // array vazio
+    }
+}
+
+// Função para escrever e salvar as metas no arquivo <metas.json>
+const salvarMetas = async () => {
+    await fs.writeFile(
+        "metas.json", // define em qual arquivo será escrito os dados
+         JSON.stringify(metas, null, 2) // transforma os dados de JS para JSON
+    )
 }
 
 // Função para cadastrar as metas
-let metas = [meta]
 const cadastrarMeta = async () => {
     const meta = await input({ message: "Digite a meta:"})
     
@@ -136,9 +157,15 @@ const mostrarMensagem = () => {
 }
 
 // Função principal para iniciar a aplicação
-const start = async () => {    
-    while (true) {
-        mostrarMensagem(); // Executa a função de mensagens a cada iteração do console
+const start = async () => { 
+    // Executa a função <carregarMetas> ao inicializar o app
+    await carregarMetas();  
+    while (true) { 
+        // Executa a função de mensagens a cada iteração do console
+        mostrarMensagem();
+
+        // Executa a função de salvar as metas no arquivo <metas.json>
+        await salvarMetas();
 
         const opcao = await select ({
             message: "Menu >",

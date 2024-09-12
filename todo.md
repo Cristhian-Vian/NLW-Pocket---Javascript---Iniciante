@@ -1,7 +1,10 @@
-- Criar metas
-- Listar metas
-    - Metas realizadas
-    - Metas abertas
-- Marcar/Desmarcar metas realizadas
-- Remover metas
-- Sistema de mensagens
+Tarefas a serem realizadas no curso:
+
+- [x] Criar metas
+- [x] Listar metas
+    - [x] Metas realizadas
+    - [x] Metas abertas
+- [x] Marcar/Desmarcar metas realizadas
+- [x] Remover metas
+- [x] Sistema de mensagens
+- [x] Sistema de carregar e salvar metas
