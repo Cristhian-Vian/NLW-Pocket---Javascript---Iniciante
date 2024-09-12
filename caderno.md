@@ -56,8 +56,8 @@ Apresentar os dados
 - [x] Uma lista que contém qualquer tipo de dado
     - arrays são declaros com colchetes "[]"
     - Exemplo: $ let listaDeNomes = ["Cristhian", "Leticia"]
-- [] Métodos de array: push, [find, forEach, filter, map] : HOF (Higher Order Functions)
-    - forEach: para cada
+- [x] Métodos de array: push, [find, forEach, filter, map] : HOF (Higher Order Functions)
+    - forEach: "para cada"
 
 ### Objetos:
 - Objetos são declarados com chaves "{}"
