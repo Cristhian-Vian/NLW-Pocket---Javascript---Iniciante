@@ -1,5 +1,7 @@
 # App de Controle de Metas
 
+**Projeto desenvolvido no evento Next Level Week Pocket JavaScript da Rocketseat, workshop prático com foco na tecnologia JavaScript.**
+
 ## Descrição
 
 O aplicativo de controle de metas é um software de linha de comando desenvolvido em Node.js que utiliza o módulo Inquirer.js para criar uma interface interativa com o usuário.
@@ -36,9 +38,13 @@ Ele permite aos usuários:
 
 ## Tecnologias Utilizadas
 
-* **Node.js:** Plataforma de execução JavaScript fora do navegador.
-* **Inquirer.js:** Biblioteca para criar interfaces de linha de comando interativas.
-* **fs:** Módulo do Node.js para interagir com o sistema de arquivos.
+* **JavaScript:** linguagem de programação interpretada
+* **Node.js:** ambiente de execução JavaScript
+* **Git:** ferramenta para controle de versionamento de código
+
+[![JavaScript](https://img.shields.io/badge/JavaScript-yellow)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Node.js](https://img.shields.io/badge/Node.js-green)](https://nodejs.org/)
+[![Git](https://img.shields.io/badge/Git-blue)](https://git-scm.com/)
 
 ## Funcionamento
 
